@@ -36,18 +36,15 @@ charArray = (charArray.join(''));
 var pwRandom = [];
 
 for (var i = 0; i < pwLength; i++) {
-  pwRandom.push
+  pwRandom.push(charArray.charAt(Math.floor(Math.random() * charArray.length)));
 }
 
-
+pwRandom = (pwRandom.join(''));
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
+  passwordText.value = pwRandom;
 }
 
 // Add event listener to generate button
