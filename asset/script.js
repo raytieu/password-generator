@@ -16,6 +16,8 @@ var pwUppercase = confirm("Would you like uppercase letters in your password?");
 var pwNumeric = confirm("Would you like numeric characters in your password?");
 var pwSpecial = confirm("Would you like special characters (e.g. !@#$) in your password?");
 
+alert("Click on Generate Password to get your random password!");
+
 // Create array of possible characters in password
 var charArray = [];
 if (pwLowercase) {
@@ -33,6 +35,7 @@ if (pwSpecial) {
 
 charArray = (charArray.join(''));
 
+// Create a random password using user-confirmed characters in charArray
 var pwRandom = [];
 
 for (var i = 0; i < pwLength; i++) {
